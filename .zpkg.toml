@@ -1,0 +1,36 @@
+[package]
+org = "ores-wasm-loaders"
+name = "owl-manifest-tools.rs"
+version = "0.1.0"
+kind = "cli"
+language = "rust"
+description = "ORES Wasm Loaders: the build-output inspector"
+license = "MIT"
+
+[package.repository]
+vcs = "git"
+url = "https://github.com/ores-wasm-loaders/owl-manifest-tools.rs"
+
+[dependencies]
+"ores-wasm-loaders/owl-interfaces" = "^0.1.0"
+
+[build]
+command = "cargo test"
+
+[publish]
+include_readme = true
+tag_format = "v{version}"
+exclude = [".env", ".env.*", ".vendor/**", ".zed/**", ".zed-pack/**", "tmp/**", "**/*.log", ".DS_Store", "**/target/**", "**/node_modules/**", "**/dist/**"]
+
+[install]
+dir = ".vendor/.zed"
+
+[targets.repository]
+dir = "."
+
+[targets.rust]
+dir = "."
+adapter = "rust"
+
+[scripts]
+test = "cargo test"

@@ -1,0 +1,20 @@
+[package]
+name = "owl-manifest-tools"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Generate and verify owl-manifest.json from a real Flutter or Rust/Wasm build tree. Standard library only."
+repository = "https://github.com/ores-wasm-loaders/owl-manifest-tools.rs"
+
+[[bin]]
+name = "owl-manifest"
+path = "src/main.rs"
+
+[lib]
+name = "owl_manifest_tools"
+path = "src/lib.rs"
+
+[dependencies]
+
+[lints.rust]
+unsafe_code = "forbid"
